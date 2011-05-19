@@ -61,16 +61,27 @@
             margin: 15px;
             background-image: url( tux.png );
             background-size: contain;
+            width: 90%;
+          }
+          div.fixedbelow {
+            position: absolute;
+            z-index: 0;
+            background-color: white;
           }
           div.translucent {
             margin: 30px;
+            z-index: 1;
             opacity: 0.50;
             filter: alpha(opacity=50);
             background-color: black;
             color: white;
+            margin-left: 50px;
           }
         </style>
         <article class='example'>
+          <div class='fixedbelow'>
+            <img src='wilber.png'>
+          </div>
           <div class='translucent'>
             <p>
               Once applied, anything under the selected elements will
