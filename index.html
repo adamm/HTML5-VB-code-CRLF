@@ -2,71 +2,21 @@
 <html>
   <head>
     <title>HTML5.array.org</title>
-    <style type='text/css'>
-      header, footer {
-        border: 1px solid gray;
-      }
-      header nav {
-        border: 1px dashed black;
-        float: right;
-      }
-      header nav a {
-        margin: 10px;
-      }
-      section#sidebar {
-        border: 3px dotted gray;
-        float: right;
-        width: 20%;
-        background-color: white;
-      }
-      section#articles {
-        border: 3px dashed black;
-        margin: 10px;
-      }
-      section#articles article {
-        border: 2px solid gray;
-        margin: 10px;
-        clear: left;
-      }
-      article hgroup {
-        margin: 0.67em 0;
-      }
-      article hgroup * {
-        margin: 0;
-      }
-      article h3 {
-        font-size: 1em;
-      }
-      article h4 {
-        font-size: 0.75em;
-      }
-      aside {
-        border: 1px solid;
-        max-width: 20%;
-        float: right;
-      }
-      figure {
-        border: 1px solid;
-        padding: 10px;
-        margin: 10px;
-        padding-bottom: 50px;
-        background-color: white;
-        float: left;
-      }
-      figure img {
-        border: 1px solid;
-        padding: 5px;
-        background-color: white;
-      }
-    </style>
+    <!--[if lt IE 9]>
+    <script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script>
+    <![endif]-->
+    <link rel='stylesheet' type='text/css' media='all' href='base.css'>
+    <link rel='stylesheet' type='text/css' media='screen and (max-width: 500px)' href='mobile.css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=yes'>
   </head>
   <body>
+    <div class='content'>
     <header>
       <nav>
         <a href='index.html'>Home</a>
         <a href='tutorials/'>Tutorials</a>
         <a href='demos/'>Demos</a>
-        <a href='vb/'>Visual Blueprint&trade;</a>
+        <a href='vb/'>Visual&nbsp;Blueprint&trade;</a>
       </nav>
       <h1>HTML5.array.org</h1>
     </header>
@@ -87,10 +37,10 @@
           <h3>Welcome to HTML5!</h3>
           <h4>Posted by Adam McDaniel on April 11, 2011</h4>
         </hgroup>
+        <figure class='html5logo'>
+          <img src="HTML5_Badge_128.png" alt="HTML5 Logo by W3C">
+        </figure>
         <p>
-          <figure>
-            <img src="HTML5_Logo_256.png" alt="HTML5 Logo by W3C">
-          </figure>
           Welcome to HTML5.array.org! Your resource for learning about the latest
           features and benefits available in the world of <a
             href='http://wiki.whatwg.org/wiki/FAQ#What_is_HTML5.3F'>HTML5</a>.  This
@@ -99,8 +49,9 @@
           Adam McDaniel, available late 2011 from <a
             href='http://www.wiley.com'>Wiley</a>.
         </p>
+        <aside>New and interesting Hacks.</aside>
         <p>
-          <aside>New and interesting Hacks.</aside>Every few weeks this
+          Every few weeks this
           site will feature a new and interesting hack or tutorial,
           allowing you to keep tabs on the latest development in the world
           of HTML5. 
@@ -122,6 +73,10 @@
     </section>
     <footer>
       &copy;2011 Adam McDaniel
+      <div class='html5badge'>
+        <a href="http://www.w3.org/html/logo/"><img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics"></a>
+      </div>
     </footer>
+    </div>
   </body>
 </html>
