@@ -61,11 +61,68 @@
         <h4>Example</h4>
         <style>
           article.example {
-
+            margin: 30px 0px;
           }
+          article.example div {
+            left: 100px;
+            width: 300px;
+            display: inline-block;
+            height: 6em;
+            border: 1px solid black;
+            margin-left: 3%;
+            box-shadow: 3px 3px 10px 0px black;
+            background-color: white;
+          }
+          article.example div p {
+            text-align: center;
+            margin: 2.5em 0;
+          }
+          @-webkit-keyframes jumpy {
+            25% {
+              -webkit-transform: skewy( 20deg );
+              -webkit-transform-origin: bottom right;
+            }
+            50% {
+              -webkit-transform: skewy( 0deg );
+              -webkit-transform-origin: bottom right;
+            }
+            75% {
+              -webkit-transform: skewy( -20deg );
+              -webkit-transform-origin: bottom left;
+            }
+            100% {
+              -webkit-transform: skewy( 0deg );
+              -webkit-transform-origin: bottom left;
+            }
+          }
+          @-webkit-keyframes rounder {
+            from {
+              border-radius: 0px;
+            }
+            to {
+              border-radius: 50px;
+            }
+          }
+          div.animate {
+            -webkit-animation-name: jumpy, rounder;
+            -webkit-animation-direction: normal, alternate;
+            -webkit-animation-duration: 4s, 1s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-play-state: paused;
+            border: 1px solid black;
+            box-shadow: 3px 3px 10px 0px black;
+          }
+//          div.animate:hover {
+//            -webkit-animation-name: jumpy, rounder;
+//            -webkit-animation-direction: normal, alternate;
+//            -webkit-animation-duration: 4s, 1s;
+//            -webkit-animation-iteration-count: infinite;
+//          }
         </style>
         <article class='example'>
-
+          <div class='animate' onclick='startstop()'>
+            <p>Animating Object</p>
+          </div>
         </article>
       </article>
     </section>
@@ -73,5 +130,15 @@
       &copy;2011 Adam McDaniel
     </footer>
     </div>
+    <script type='text/javascript' src='../../jquery-1.5.1.js'></script>
+    <script type='text/javascript'>
+      function startstop() {
+        if ( $('div.animate').css('-webkit-animation-play-state') ==
+                 'paused, paused' )
+          $('div.animate').css('-webkit-animation-play-state', 'running');
+        else
+          $('div.animate').css('-webkit-animation-play-state', 'paused');
+      }
+    </script>
   </body>
 </html>

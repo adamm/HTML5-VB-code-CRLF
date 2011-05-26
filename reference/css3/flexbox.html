@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Background Image Property: Linear Gradient - HTML5.array.org</title>
+    <title>Flexibe Box Model - HTML5.array.org</title>
     <!--[if lt IE 9]>
     <script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script>
     <![endif]-->
@@ -28,45 +28,59 @@
       <h2>CSS Reference</h2>
       <article class='reference'>
         <hgroup>
-          <h3>Background Image Property: Linear Gradient</h3>
+          <h3>Flexible Box Model</h3>
           <h4>Synopsis</h4>
         </hgroup>
         <pre><code>&lt;style&gt;
-  <i>selector</i> {
-    background-image: linear-gradient( <i>start</i>, <i>color percent</i>, ... );
-    background-image: -o-linear-gradient( <i>start</i>, <i>color percent</i>, ... );
-    background-image: -ms-linear-gradient( <i>start</i>, <i>color percent</i>, ... );
-    background-image: -moz-linear-gradient( <i>start</i>, <i>color percent</i>, ... );
-    background-image: -webkit-linear-gradient( <i>start</i>, <i>color percent</i>, ... );
+  <i>div.flex-box</i> {
+    display: box;
+    display: -moz-box;
+    display: -webkit-box;
   }
 &lt;/style&gt;
+&lt;div class='flex-box'&gt;
+  &lt;p&gt;Child 1&lt;/p&gt;
+  &lt;p&gt;Child 2&lt;/p&gt;
+  &lt;p&gt;Child 3&lt;/p&gt;
+&lt;/div&gt;
 </code></pre>
         <h4>Description</h4>
         <p>
-          You can assign a linear color gradient in CSS3 that renders one
-          side of an object in one color, shifting across the color
-          spectrum to the other side of the object and the second color.
-          The linear-gradient is applied to the background-image property.
+          The Flexible Box Model is a module of the draft CSS3
+          specification, and by extension, HTML5. It allows you to organize
+          web page data into multiple rows or columns within a new display:
+          box object.
+        </p>
+        <p>
+          The Flexible Box Model makes it is easier to construct
+          one-dimensional data -- one row with multiple columns or one
+          column with multiple rows -- than HTML tables, and provides
+          additional flexibility when ordering and stylizing the data in
+          your CSS rules.
         </p>
         <h4>Example</h4>
         <style>
           article.example {
-            margin: 30px;
+            margin: 10px;
           }
-          div.linear-gradient {
-            width: 50%;
-            height: 400px;
-            border: 1px solid;
-            background-image: linear-gradient(top left, #bada55, white 30%, black 70%);
-            background-image: -o-linear-gradient(top left, #bada55, white 30%, black 70%);
-            background-image: -ms-linear-gradient(top left, #bada55, white 30%, black 70%);
-            background-image: -moz-linear-gradient(top left, #bada55, white 30%, black 70%);
-            background-image: -webkit-linear-gradient(top left, #bada55, white 30%, black 70%);
+          div.horizontal-box {
+            display: box;
+            display: -moz-box;
+            display: -webkit-box;
+            box-orient: horizontal;
+            -moz-box-orient: horizontal;
+            -webkit-box-orient: horizontal;
+            border: 2px dashed black;
+          }
+          div.horizontal-box > * {
+            border: 2px solid black;
           }
         </style>
         <article class='example'>
-          <div class='linear-gradient'>
-            &nbsp;
+          <div class='horizontal-box'>
+            <div>box-child 1</div>
+            <div>box-child 2</div>
+            <div>box-child 3</div>
           </div>
         </article>
       </article>

@@ -51,11 +51,63 @@
         <h4>Example</h4>
         <style>
           article.example {
-
+            margin: 30px 0px;
+          }
+          article.example div {
+            display: inline-block;
+            width: 20%;
+            height: 100px;
+            border: 1px solid black;
+            margin-left: 3%;
+            box-shadow: 3px 3px 10px 0px black;
+            background-color: white;
+          }
+          article.example div p {
+            text-align: center;
+            margin: 30px 0;
+          }
+          .scale {
+            transform: scale( 0.75 );
+            -o-transform: scale( 0.75 );
+            -ms-transform: scale( 0.75 );
+            -moz-transform: scale( 0.75 );
+            -webkit-transform: scale( 0.75 );
+          }
+          .skew {
+            transform: skew( 40deg, -10deg );
+            -o-transform: skew( 40deg, -10deg );
+            -ms-transform: skewx( 40deg ) skewy( -10deg );
+            -moz-transform: skew( 40deg, -10deg );
+            -webkit-transform: skew( 40deg, -10deg );
+          }
+          .rotate {
+            transform: rotate( 30deg );
+            -o-transform: rotate( 30deg );
+            -ms-transform: rotate( 30deg );
+            -moz-transform: rotate( 30deg );
+            -webkit-transform: rotate( 30deg );
+          }
+          .translate {
+            transform: translate( 50px, -50px );
+            -o-transform: translate( 50px, -50px );
+            -ms-transform: translatex( 50px ) translatey( -50px );
+            -moz-transform: translate( 50px, -50px );
+            -webkit-transform: translate( 50px, -50px );
           }
         </style>
         <article class='example'>
-
+          <div class='scale'>
+            <p>Scaled<br>Object</p>
+          </div>
+          <div class='skew'>
+            <p>Skewed<br>Object</p>
+          </div>
+          <div class='rotate'>
+            <p>Rotated<br>Object</p>
+          </div>
+          <div class='translate'>
+            <p>Translated<br>Object</p>
+          </div>
         </article>
       </article>
     </section>
