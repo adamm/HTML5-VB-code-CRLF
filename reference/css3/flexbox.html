@@ -75,15 +75,25 @@
           div.horizontal-box > * {
             border: 2px solid black;
           }
+          div.vertical-box {
+            display: box;
+            display: -moz-box;
+            display: -webkit-box;
+            box-orient: vertical;
+            -moz-box-orient: vertical;
+            -webkit-box-orient: vertical;
+            border: 2px dashed black;
+          }
+          div.vertical-box > * {
+            border: 2px solid black;
+          }
         </style>
         <article class='example'>
-          Content prior to the flexible box...
-          <div class='horizontal-box'>
+          <div class='vertical-box'>
             <div>box-child 1</div>
             <div>box-child 2</div>
             <div>box-child 3</div>
           </div>
-          ...followed by content after the flexible box.
         </article>
       </article>
     </section>
