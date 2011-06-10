@@ -50,12 +50,24 @@
         </style>
         <article class='example'>
 
-          <form method='get' action='../cgi/data-dumper.pl' id='myform'>
-            Text #1: <input type='text' name='text-field1'>
+          Text (shared): <input type='text' id='shared' name='text-shared' value='test1'>
+          <form method='get' action='../cgi/data-dumper.pl' id='myform1'>
+            Text (form1): <input type='text' name='text-form1' value='test2'>
+            <input type=submit>
+          </form>
+          <form method='get' action='../cgi/data-dumper.pl' id='myform2'>
+            Text (form2): <input type='text' name='text-form2' value='test3'>
             <input type=submit>
           </form>
 
-          Text #2: <input type='text' name='text-field2' form='myform'>
+          <script src='../jquery-1.5.1.js'></script>
+          <script>
+            $(function(){
+              $('form').submit(function(event) {
+                $(this).append("<input type=hidden name='shared' value='" + $('input[name=text-shared]').val() + "'>" );
+              });
+            });
+          </script>
 
         </article>
       </article>
