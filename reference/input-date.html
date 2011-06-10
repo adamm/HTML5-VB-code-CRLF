@@ -47,11 +47,15 @@
         </style>
         <link rel='stylesheet' type='text/css' 
             href='../jquery-ui/css/ui-lightness/jquery-ui-1.8.13.custom.css'>
+        <script src='../modernizr-1.7.min.js'></script>
         <script src='../jquery-ui/js/jquery-1.5.1.min.js'></script>
         <script src='../jquery-ui/js/jquery-ui-1.8.13.custom.min.js'></script>
         <script>
           $(function() {
-            $("#datepicker").datepicker();
+            if ( ! Modernizr.inputtypes.date ) {
+              $("#datepicker").datepicker();
+              $("#datepicker").datepicker( "option", "dateFormat", 'yy-mm-dd' );
+            }
           });
         </script>
         <article class='example'>
